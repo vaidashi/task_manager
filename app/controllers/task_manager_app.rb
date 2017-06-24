@@ -23,8 +23,8 @@ class TaskManagerApp < Sinatra::Base
   end
 
   get '/tasks/:id' do
-    @task = Task.find(params[:id])
+    @task = Task.find(params[:id].to_i)
     erb :show
   end
-  
+
 end
